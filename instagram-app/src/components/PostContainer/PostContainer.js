@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 
 const PostContainer = props => {
+  console.log(props);
     return (
          props.post.map(post => (
             <div className = 'post-container' key = {post.timestamp}>
@@ -20,8 +21,8 @@ const PostContainer = props => {
               </div>
 
               <div>
-                <i className ="fa fa-heart-o post-heart"></i>
-                <i class="fa fa-comment-o post-comment"></i>
+                <i className = "fa fa-heart-o post-heart"></i>
+                <i className = "fa fa-comment-o post-comment"></i>
               </div>
                 
               <div className = 'likes'>{post.likes} likes</div>
@@ -33,6 +34,19 @@ const PostContainer = props => {
     );
     }
 
+    PostContainer.propTypes = {
+      post: PropTypes.arrayOf(PropTypes.shape({
+        username: PropTypes.string.isRequired,
+        thumbnailUrl:PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string.isRequired,
+      }))
+    }
+
+    PostContainer.defaultProps = {
+      post: []
+    }
 
 
 

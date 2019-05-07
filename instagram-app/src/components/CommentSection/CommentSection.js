@@ -20,8 +20,18 @@ const CommentSection = (props)=> {
 }
     
 
+
+
 CommentSection.propTypes = {
-  
+    comment: PropTypes.arrayOf(PropTypes.shape({
+      username: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    }))
+}
+
+
+CommentSection.defaultProps = {
+  comment: []
 }
 
 
