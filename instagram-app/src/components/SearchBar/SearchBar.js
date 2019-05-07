@@ -12,17 +12,17 @@ const Searchbar = () => {
                 <h1>Instagram</h1>
             </div>
             <div className = 'search-bar-container'>
-                    <i class="fa fa-search"></i>
+                    <i className ="fa fa-search"></i>
                     <input className = 'search-bar' type="text" placeholder="Search.."/>
             </div>
             <div>
-                <i class="fa fa-send-o"></i>
+                <i className ="fa fa-send-o"></i>
             </div>
             <div>
-                <i class="fa fa-heart-o"></i>
+                <i className ="fa fa-heart-o"></i>
             </div>
             <div>
-                <i class="fa fa-user-o"></i>
+                <i className ="fa fa-user-o"></i>
             </div>
 
 

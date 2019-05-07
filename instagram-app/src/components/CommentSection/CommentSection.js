@@ -2,19 +2,23 @@ import React from 'react';
 
 
 
-const CommentSection = (props) => {
-    // return (
-    //     props.comment.map(comment => (
-    //       <div key = {comment.id} className = "comment">
-            
-    //         <div>
-    //           <h3>{comment.username}</h3>
-    //         </div>
-    //       </div>
+const CommentSection = (props)=> {
+  console.log(props)
+  return (
+    props.comments.map(comment => (
+      <div key = {comment.timestamp}>
+      <div>
+        {comment.username}
+      </div>
+      <div>
+        {comment.text}
+      </div>
+      </div>
+
+    ))
+  )
+}
      
-    //     ))
-    // );
-  }
 
 
 
