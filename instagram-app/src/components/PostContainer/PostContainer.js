@@ -8,15 +8,26 @@ const PostContainer = props => {
     return (
          props.post.map(post => (
             <div className = 'post-container' key = {post.timestamp}>
-            <div className = 'user-pic-name'>
-              <img className = 'user-pic' src =  {post.thumbnailUrl} alt = {post.username} />
-              <h3>{post.username}</h3>
+              <div className = 'user-pic-name'>
+                <img className = 'user-pic' src =  {post.thumbnailUrl} alt = {post.username} />
+                <h3 className = 'username'>{post.username}</h3>
               </div>
-              <img src = {post.imageUrl} alt = {post.username} />
+
               <div><p>{post.timestamp}</p></div>
-              <div><p>{post.likes}</p></div>
-              <CommentSection comments = {post.comments} />
-              <input className = 'new-comment' type = 'text' placeholder = 'Comment...'/>
+                
+              <div>
+                <img className = 'post-image' src = {post.imageUrl} alt = {post.username} />
+              </div>
+
+              <div>
+                <i className ="fa fa-heart-o post-heart"></i>
+                <i class="fa fa-comment-o post-comment"></i>
+              </div>
+                
+              <div className = 'likes'>{post.likes} likes</div>
+                <CommentSection comments = {post.comments} />
+                <input className = 'new-comment' type = 'text' placeholder = 'Comment...'/>
+              
             </div>
           ))
     );
