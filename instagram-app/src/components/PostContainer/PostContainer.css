@@ -1,0 +1,15 @@
+.post-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.user-pic-name {
+    display: flex;
+    justify-items: flex-start;
+}
+.user-pic {
+    border-radius: 50%;
+    height: 10px;;
+}

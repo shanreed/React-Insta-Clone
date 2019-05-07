@@ -12,9 +12,9 @@ const Searchbar = () => {
                 <h1>Instagram</h1>
             </div>
             <div className = 'search-bar-container'>
-                    <i className ="fa fa-search"></i>
                     <input className = 'search-bar' type="text" placeholder="Search.."/>
             </div>
+                <div className = 'icons'>
             <div>
                 <i className ="fa fa-send-o"></i>
             </div>
@@ -24,6 +24,8 @@ const Searchbar = () => {
             <div>
                 <i className ="fa fa-user-o"></i>
             </div>
+            </div>
+            
 
 
         </div>

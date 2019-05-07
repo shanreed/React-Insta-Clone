@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 
 const CommentSection = (props)=> {
@@ -16,9 +16,13 @@ const CommentSection = (props)=> {
       </div>
 
     ))
-  )
+  );
 }
-     
+    
+
+CommentSection.propTypes = {
+  
+}
 
 
 
