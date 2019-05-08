@@ -2,12 +2,37 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const CommentSection = (props)=> {
-  console.log(props)
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comment: ''
+    };
+  }
+
+  handlesChanges = e => {
+    this.setState({
+      comment: e.target.value
+    });
+  };
+
+  addNewComment = e => {
+    e.preventDefault();
+    this.props.addComment(this.state.comment, this.props.index);
+    this.setState({ comment: "" });
+  };
+
+  
+ 
+
+
+  render () {
+    console.log(this.props)
   return (
+
     <div>
-    {props.comments.map(comment => (
-      <div key = {comment.timestamp}>
+    {this.props.comments.map(comment => (
+      <div key = {comment.text}>
       <div>
         {comment.username}
       </div>
@@ -17,12 +42,20 @@ const CommentSection = (props)=> {
       </div>
     ))}
     <div>
-      <input className = 'new-comment' type = 'text' placeholder = 'Comment...'/>
+  <form onSubmit = {this.addNewComment}>
+      <input name = 'comment'
+             value = {this.state.comment}
+             onChange = {this.handlesChanges}
+              className = 'new-comment' type = 'text' placeholder = 'Comment...'/>
       <button>Comment</button>
+    </form>
     </div>
     </div>
   );
+    }
 }
+
+
     
 
 

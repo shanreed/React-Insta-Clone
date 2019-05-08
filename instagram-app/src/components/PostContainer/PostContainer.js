@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 const PostContainer = props => {
   console.log(props);
     return (
-         props.post.map(post => (
+         props.post.map((post, index) => (
             <div className = 'post-container' key = {post.timestamp}>
               <div className = 'user-pic-name'>
                 <img className = 'user-pic' src =  {post.thumbnailUrl} alt = {post.username} />
@@ -26,7 +26,7 @@ const PostContainer = props => {
               </div>
                 
               <div className = 'likes'>{post.likes} likes</div>
-                <CommentSection comments = {post.comments} />
+                <CommentSection index = {index} comments = {post.comments} addComment = {props.addComment} user = {post.username} />
             </div>
           ))
     );
