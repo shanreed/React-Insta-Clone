@@ -9,13 +9,22 @@ class App extends React.Component {
   constructor() {
     super();
     this.state ={
-     post: dummyData,
+     post: []
     
     };
+    console.log("constructor")
   }
 
 
+  componentDidMount() {
+    console.log('mount')
+    this.setState({
+      post: dummyData
+    });
+  }
+
   render(){
+    console.log('render')
     return (
       <div className = "App">
       <SearchBar />

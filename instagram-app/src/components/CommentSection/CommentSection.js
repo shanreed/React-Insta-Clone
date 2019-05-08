@@ -14,7 +14,6 @@ const CommentSection = (props)=> {
         {comment.text}
       </div>
       </div>
-
     ))
   );
 }
