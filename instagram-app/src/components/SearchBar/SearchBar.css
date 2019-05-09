@@ -1,0 +1,66 @@
+.top {
+    display: flex;
+    background-color: green;
+    height: 122px;
+    padding-left: 23px;
+    
+}
+
+
+.logo{
+    font-size: 7rem;
+    margin: 40px 0 0 8px;;
+    
+
+    
+}
+
+.line {
+    font-size: 5.8rem;
+    margin: 40px 0 0 35px;;
+   
+}
+
+.heading {
+    font-family: 'Lobster', cursive;
+    font-size: 5.2rem;
+    margin: 45px 0 0 28px;;
+    
+    
+}
+
+.search-bar-container {
+    width: 22.6%;
+    margin: 42px 0 0 362px;;
+}
+
+.search-bar {
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+}
+
+.icons {
+    display:flex;
+    justify-content: flex-end;
+    width: 715px;
+    margin-top: 60px;
+}
+
+.fa-send-o {
+    font-size: 4rem;
+    
+}
+
+.fa-heart-o {
+    font-size: 4.5rem;
+    margin-left: 70px;
+}
+
+.fa-user-o {
+    font-size: 5rem;
+    margin-left: 63px;
+    
+    
+    
+}
