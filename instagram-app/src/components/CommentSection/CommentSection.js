@@ -22,12 +22,8 @@ class CommentSection extends React.Component {
     this.setState({ comment: "" });
   };
 
-  
- 
-
 
   render () {
-    console.log(this.props)
   return (
 
     <div>

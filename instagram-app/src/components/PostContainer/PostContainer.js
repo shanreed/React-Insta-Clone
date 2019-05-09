@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 const PostContainer = props => {
-  console.log(props);
+  console.log(props.addLike);
     return (
          props.post.map((post, index) => (
             <div className = 'post-container' key = {post.timestamp}>
@@ -21,11 +21,12 @@ const PostContainer = props => {
               </div>
 
               <div>
-                <i className = "fa fa-heart-o post-heart"></i>
+              <div className = 'likes'>{post.likes} likes
+                <i className = "fa fa-heart-o post-heart" onClick = {() => props.addLike(post.id)}></i></div>
                 <i className = "fa fa-comment-o post-comment"></i>
               </div>
                 
-              <div className = 'likes'>{post.likes} likes</div>
+              
                 <CommentSection index = {index} comments = {post.comments} addComment = {props.addComment} user = {post.username} />
             </div>
           ))
